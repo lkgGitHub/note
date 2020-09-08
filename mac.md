@@ -18,3 +18,16 @@ brew install zsh-syntax-highlighting
 sudo pmset -a GPUSwitch 0
 pmset -g
 ```
+
+# git访问慢，没图片
+打开www.ipaddress.com，查询以下链接的DNS解析地址。
+将查询到的ip 和网址添加到hosts中
+
+```shell
+github.com 
+assets-cdn.github.com 
+github.global.ssl.fastly.net
+
+# 下载链接 raw.githubusercontent.com 的实际地址
+codeload.github.com
+```
