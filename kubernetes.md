@@ -3,6 +3,12 @@
 docker save -o xxx.tar "imageName:tag"
 docker load -i "cloud-importer.tar"
 
+kubectl edit statefulset yaxnet -n deepcloud
+kubectl get deploy yayaxnet -n deepcloud -o yaml >> yayaxnet.yaml  
+kubectl replace --force -f yayaxnet.yaml 
+
+
+kubectl exec -it [Kafka的pod名称] /bin/bash
 ```
 # kubectl
 ```shell
