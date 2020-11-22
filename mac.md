@@ -29,6 +29,23 @@ brew install make
 brew install allure
 ```
 
+## 安装和使用
+```shell
+# 国内安装
+/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
+/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/HomebrewUninstall.sh)"
+
+#本地软件库列表：
+brew ls
+# 查找软件：（其中google替换为要查找的软件关键字）
+brew search google
+# 查看brew版本：
+brew -v  
+# 更新brew版本：
+brew update
+ 
+brew install telnet
+```
 # 显卡切换
 ```shell
 # mac显卡模式，0: 强制使用核显； 1: 强制使用独显  2: 自动切换显卡 
@@ -47,4 +64,18 @@ github.global.ssl.fastly.net
 
 # 下载链接 raw.githubusercontent.com 的实际地址
 codeload.github.com
+```
+
+# anaconda 卸载
+```shell
+# 1.删除Anaconda的配置
+conda install anaconda-clean
+anaconda-clean —yes
+rm -rf /Users/mac/.anaconda/
+# 2.删除Anaconda的文件夹
+sudo find / -name Anaconda
+rm -rf ~/anaconda3/
+# 3.删除 ~/.bash_profile中anaconda的环境变量
+# 4.删除Anaconda的可能存在隐藏的文件
+rm -rf ~/.condarc ~/.conda ~/.continuum
 ```
