@@ -1,7 +1,7 @@
 
 # 常用命令
-# grep 
 ```shell
+# grep 
 grep -C 5 foo file # 显示file文件里匹配foo字串那行以及上下5行
 grep -B 5 foo file # 显示foo及前5行
 grep -A 5 foo file # 显示foo及后5行
@@ -15,6 +15,12 @@ netstat -aptn |grep -i 6379 # 查看是否监听在0.0.0.0:6379
 
 # 查看目录下所有文件夹
 du -ah --max-depth=1
+```
+
+# git
+```shell
+# 撤销上一次commit
+git reset --soft HEAD^
 ```
 
 
