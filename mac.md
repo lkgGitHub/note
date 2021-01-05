@@ -18,6 +18,9 @@ brew install grafana
 # zsh语法高亮
 brew install zsh-syntax-highlighting
 
+# graphviz go 性能分析web可视化
+brew install graphviz
+
 # go 静态代码质量检测工具，用于包的质量分析
 brew install golangci/tap/golangci-lint
 
