@@ -12,6 +12,8 @@ telnet IP port
 # 检查端口是否开放
 lsof -i:6379
 netstat -aptn |grep -i 6379 # 查看是否监听在0.0.0.0:6379
+watch "ss -a | wc -l"
+netstat -ae | grep -i TIME_WAIT
 
 # 查看目录下所有文件夹
 du -ah --max-depth=1
@@ -43,6 +45,29 @@ htop
 ```
 
 ```
+# 1. CPU
+top
+
+# 2. 内存
+
+
+# 4. 磁盘IO
+iostat -x （查看磁盘状态）
+iotop命令 （查看磁盘状态）
+
+
+# 3. 网络IO
+1. 监控总体带宽使用――nload、bmon、slurm、bwm-ng、cbm、speedometer和netload
+2. 监控总体带宽使用（批量式输出）――vnstat、ifstat、dstat和collectl
+3. 每个套接字连接的带宽使用――iftop、iptraf、tcptrack、pktstat、netwatch和trafshow
+4. 每个进程的带宽使用――nethogs
+
+## nload
+让用户可以分开来监控入站流量和出站流量。它还可以绘制图表以显示入站流量和出站流量。
+如果你只需要快速查看总带宽使用情况，无需每个进程的详细情况，那么nload用起来很方便。
+
+## iftop
+
 
 # git
 ```shell
