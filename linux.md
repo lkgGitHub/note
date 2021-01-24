@@ -15,6 +15,9 @@ netstat -aptn |grep -i 6379 # 查看是否监听在0.0.0.0:6379
 watch "ss -a | wc -l"
 netstat -ae | grep -i TIME_WAIT
 
+# unit 日志
+journalctl -u -f service.name
+
 # 查看目录下所有文件夹
 du -ah --max-depth=1
 ```
