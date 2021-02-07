@@ -31,4 +31,15 @@ FROM
 WHERE
 	datname = 'god_eye' AND state = 'active'
 	AND pid <> pg_backend_pid ( );
+
+
+-- 表大小
+SELECT 
+table_schema || '.' || table_name 
+AS table_full_name, pg_size_pretty(pg_total_relation_size('"' ||table_schema || '"."' || table_name || '"')) AS size
+FROM 
+information_schema.tables
+ORDER BY
+    pg_total_relation_size('"' || table_schema || '"."' || table_name || '"')
+DESC limit 20;
 ```
